@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: index-container
-        image: 225989348530.dkr.ecr.<your-region>.amazonaws.com/index-image:latest
+        image: 225989348530.dkr.ecr.us-east-2.amazonaws.com/app/vinapp:latest
         ports:
         - containerPort: 80
