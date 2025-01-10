@@ -1,0 +1,20 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: index-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: index-app
+  template:
+    metadata:
+      labels:
+        app: index-app
+    spec:
+      containers:
+      - name: index-container
+        image: <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/index-image:latest
+        ports:
+        - containerPort: 80
